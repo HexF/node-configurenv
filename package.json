@@ -1,0 +1,10 @@
+{
+  "name": "ConfigurENV",
+  "version": "1.0.0",
+  "description": "A configuration manager for using environment variables to consume config",
+  "main": "index.js",
+  "repository": "https://github.com/hexf/node-configurenv",
+  "author": "HexF",
+  "license": "MIT",
+  "private": false
+}
