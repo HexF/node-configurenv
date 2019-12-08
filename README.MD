@@ -39,6 +39,6 @@ const config=require('configurenv')(
 }).build(process.env)
 
 console.log(config.config) //List our config values
-console.log(config.struct) //List the parsed config
+console.log(config._cfg) //List the parsed config
 
 ```
