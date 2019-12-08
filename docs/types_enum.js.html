@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: types/enum.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,50 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: types/enum.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const { ParseException } = require('../exceptions')
+
+/**
+ * Enum Type
+ * @class
+ * @name Enum
+ */
+module.exports = {
+    /**
+     * Enum Parser Options
+     * @typedef {Type~Options} Enum~Options
+     * @property {string} values - Possible vales for the enum
+     * @property {string} default - Default value
+     */
+
+    /**
+     * Enum Type Parser
+     * @func Enum~Parse
+     * @param {Enum~Options} options - Options
+     * @param {string} value - Value passed in by ENV
+     * @returns {string} Value parsed in after validation
+     */
+    parse: function (options, value) {
+        if (!options.values || options.values.length &lt; 1) throw new ParseException("Values are not declared for type ENUM")
+        var values = options.values.map(x => x.toLowerCase())
+
+        if (!values.includes(value.toLowerCase())) throw new ParseException("Value specified was not a valid value")
+
+        return value.toUpperCase()
+    }
 
 
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+};</code></pre>
+        </article>
+    </section>
 
 
 

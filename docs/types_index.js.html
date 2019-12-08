@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: types/index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,50 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: types/index.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const { ParseException } = require('../exceptions')
 
+var types = {
+    boolean: require('./boolean'),
+    config: require('./config'),
+    enum: require('./enum'),
+    int: require('./int'),
+    string: require('./string')
+};
 
-    <h3> </h3>
+/**
+ * Everything about types
+ * @class Types
+ * 
+ */
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+module.exports = {
+    /**
+     * All the possible types
+     */
+    types: types,
+    /**
+     * Universally parses any type from a string to the value
+     * @function Types~Parse
+     * @param {Type~Options} options 
+     * @param {string} value 
+     * @returns {*} Parsed Value
+     */
+    parse: function (options, value) {
+        if (!options.type || !types[options.type]) throw new ParseException("Type was not declared or was not a valid type")
+        return types[options.type].parse(options, value)
+    }
+}</code></pre>
+        </article>
+    </section>
 
 
 

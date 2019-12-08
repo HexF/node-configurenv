@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Type</title>
+    <title>JSDoc: Class: Types</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Type</h1>
+    <h1 class="page-title">Class: Types</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Type<span class="signature">()</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Types<span class="signature">()</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +41,7 @@
     
 
     
-    <h4 class="name" id="Type"><span class="type-signature"></span>new Type<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Types"><span class="type-signature"></span>new Types<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -49,7 +49,7 @@
 
 
 <div class="description">
-    Base Type
+    Everything about types
 </div>
 
 
@@ -93,7 +93,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_type.js.html">types/type.js</a>, <a href="types_type.js.html#line1">line 1</a>
+        <a href="types_index.js.html">types/index.js</a>, <a href="types_index.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -149,7 +149,7 @@
     
 
     
-    <h4 class="name" id="~Parse"><span class="type-signature">(inner) </span>Parse<span class="signature">(options, value)</span><span class="type-signature"> &rarr; {null}</span></h4>
+    <h4 class="name" id="~Parse"><span class="type-signature">(inner) </span>Parse<span class="signature">(options, value)</span><span class="type-signature"> &rarr; {*}</span></h4>
     
 
     
@@ -157,7 +157,7 @@
 
 
 <div class="description">
-    Basic Type Parser
+    Universally parses any type from a string to the value
 </div>
 
 
@@ -209,7 +209,7 @@
 
             
 
-            <td class="description last">Options</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -222,7 +222,7 @@
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">string</span>
 
 
             
@@ -232,7 +232,7 @@
 
             
 
-            <td class="description last">Value passed in by ENV</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -273,7 +273,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_type.js.html">types/type.js</a>, <a href="types_type.js.html#line15">line 15</a>
+        <a href="types_index.js.html">types/index.js</a>, <a href="types_index.js.html#line22">line 22</a>
     </li></ul></dd>
     
 
@@ -302,7 +302,7 @@
 
         
 <div class="param-desc">
-    - Returns null as this is an interface and not an implementation
+    Parsed Value
 </div>
 
 
@@ -313,7 +313,7 @@
     </dt>
     <dd>
         
-<span class="param-type">null</span>
+<span class="param-type">*</span>
 
 
     </dd>
@@ -328,180 +328,6 @@
         
     
 
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        
-                
-<h4 class="name" id="~Options">Options</h4>
-
-
-
-
-<div class="description">
-    Basic Type Options
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>env</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Environment Variable name to map this to</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mapping</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Key to map this in the config object to</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="types_type.js.html">types/type.js</a>, <a href="types_type.js.html#line7">line 7</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
     
 
     
